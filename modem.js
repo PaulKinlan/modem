@@ -15,7 +15,7 @@ Modem.prototype.open = function(device, callback, errorCallback) {
   this.device = device;
   this.connectionId = 0;
   this.state = "CONNECTING";
-  chrome.experiemental.serial.open(this.device, function(e) {
+  chrome.experimental.serial.open(this.device, function(e) {
     this.connectionId = e.connectionId;
     if(this.connectionId == -1) {
       this.state = "ERROR";
